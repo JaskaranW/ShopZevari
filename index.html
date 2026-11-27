@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Zevari — The Occasion is You</title>
+  <meta name="description" content="The Occasion is You. Contemporary South Asian fine & demi-fine jewellery launching soon in Canada & USA." />
+
+  <!-- Brand Typography: Bodoni Moda, Cormorant Garamond, DM Sans -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Bodoni+Moda:ital,opsz,wght@0,6..96,400..600;1,6..96,400..500&family=Cormorant+Garamond:ital,wght@0,400;0,500;1,400;1,500&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet" />
+
+  <!-- Tailwind CSS -->
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            zevari: {
+              cherry: '#401C2D',
+              sage: '#C5CDB1',
+              ivory: '#F7F3E9',
+              gold: '#BDA16D',
+            }
+          },
+          fontFamily: {
+            wordmark: ['"Bodoni Moda"', 'Georgia', 'serif'],
+            serif: ['"Cormorant Garamond"', 'Georgia', 'serif'],
+            sans: ['"DM Sans"', 'system-ui', 'sans-serif'],
+          }
+        }
+      }
+    };
+  </script>
+
+  <style>
+    :root {
+      --bg-canvas: #401C2D;
+      --bg-primary: #401C2D;
+      --accent-soft: #C5CDB1;
+      --accent-gold: #BDA16D;
+      --text-primary: #F7F3E9;
+    }
+
+    body {
+      background-color: var(--bg-canvas);
+      color: var(--text-primary);
+    }
+
+    .theme-bg-primary { background-color: var(--bg-primary); }
+    .theme-bg-accent { background-color: var(--accent-soft); }
+    .theme-text-primary { color: var(--text-primary); }
+    .theme-text-accent { color: var(--accent-soft); }
+    .theme-text-gold { color: var(--accent-gold); }
+    .theme-border-gold { border-color: color-mix(in srgb, var(--accent-gold) 30%, transparent); }
+
+    .zevari-wordmark {
+      font-family: 'Bodoni Moda', Georgia, serif;
+      font-weight: 500;
+      letter-spacing: -0.025em;
+    }
+  </style>
+</head>
+<body class="font-sans antialiased min-h-screen flex flex-col justify-between selection:bg-[#C5CDB1] selection:text-[#401C2D]">
+
+  <!-- Minimal Header -->
+  <header class="w-full max-w-7xl mx-auto px-8 sm:px-14 pt-10 pb-4 flex items-center justify-between">
+    <a href="#" class="zevari-wordmark text-3xl sm:text-4xl text-[#C5CDB1] hover:text-[#F7F3E9] transition-colors">
+      Zevari
+    </a>
+
+    <div class="flex items-center">
+      <!-- Instagram Link -->
+      <a
+        href="https://www.instagram.com/shopzevari/"
+        target="_blank"
+        rel="noopener noreferrer"
+        class="inline-flex items-center gap-2 px-4 py-2 rounded-full border border-[#BDA16D]/35 text-[#F7F3E9]/90 text-xs tracking-[0.16em] uppercase hover:bg-[#C5CDB1] hover:text-[#401C2D] hover:border-[#C5CDB1] transition-colors"
+      >
+        <svg class="w-3.5 h-3.5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+          <rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect>
+          <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path>
+          <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line>
+        </svg>
+        <span>@shopzevari</span>
+      </a>
+    </div>
+  </header>
+
+  <!-- Open Full-Canvas Editorial Centerpiece -->
+  <main class="w-full max-w-5xl mx-auto px-8 sm:px-14 my-auto py-10 text-center space-y-9">
+    <div class="flex items-center justify-center gap-4 text-[11px] tracking-[0.34em] uppercase theme-text-gold">
+      <span class="w-12 h-px bg-current opacity-50"></span>
+      <span>Private Preview &bull; Canada &amp; USA</span>
+      <span class="w-12 h-px bg-current opacity-50"></span>
+    </div>
+
+    <h1 class="font-wordmark text-5xl sm:text-6xl md:text-7xl lg:text-8xl leading-[1.05] tracking-tight">
+      <span class="text-[#F7F3E9]">The Occasion</span>
+      <span class="block sm:inline font-serif italic font-normal theme-text-accent"> is You.</span>
+    </h1>
+
+    <p class="text-[#F7F3E9]/85 text-base sm:text-lg max-w-2xl mx-auto leading-relaxed font-light tracking-wide">
+      Contemporary South Asian adornment, reimagined with quiet luxury. Designed to be lived in, celebrated in, and remembered.
+    </p>
+
+    <!-- Clean Waitlist Form -->
+    <form id="launch-form" class="pt-3 flex flex-col sm:flex-row gap-3.5 max-w-xl mx-auto" novalidate>
+      <label for="vip-email" class="sr-only">Email address</label>
+      <input
+        id="vip-email"
+        type="email"
+        required
+        placeholder="Your email for private access"
+        class="flex-1 px-6 py-4 rounded-full bg-white/[0.06] border border-[#BDA16D]/35 text-[#F7F3E9] placeholder-[#F7F3E9]/50 text-sm sm:text-base focus:outline-none focus:border-[#BDA16D] transition-colors"
+      />
+      <button
+        type="submit"
+        class="theme-bg-accent text-[#401C2D] px-8 py-4 rounded-full text-xs tracking-[0.22em] uppercase font-semibold hover:brightness-105 transition-all cursor-pointer whitespace-nowrap shadow-sm"
+      >
+        Request Access
+      </button>
+    </form>
+
+    <!-- Inline Status Message -->
+    <p id="form-feedback" role="status" aria-live="polite" class="hidden text-xs sm:text-sm tracking-[0.14em] theme-text-gold pt-1"></p>
+
+    <!-- Subtle Collection Tags -->
+    <div class="pt-10 border-t border-[#BDA16D]/20 max-w-2xl mx-auto flex flex-wrap items-center justify-center gap-x-8 gap-y-2 text-[11px] tracking-[0.26em] uppercase text-[#F7F3E9]/65">
+      <span>The Everyday Edit</span>
+      <span class="theme-text-gold">&loz;</span>
+      <span>The Occasion Edit</span>
+      <span class="theme-text-gold">&loz;</span>
+      <a href="https://www.instagram.com/shopzevari/" target="_blank" rel="noopener noreferrer" class="underline underline-offset-4 hover:text-[#F7F3E9] transition-colors">
+        @shopzevari
+      </a>
+    </div>
+  </main>
+
+  <!-- Compact Footer -->
+  <footer class="w-full max-w-7xl mx-auto px-8 sm:px-14 py-7 flex flex-col sm:flex-row items-center justify-between gap-2 text-[11px] tracking-[0.24em] uppercase text-[#F7F3E9]/55">
+    <span>Contemporary South Asian Jewellery House</span>
+    <span>&copy; 2026 Zevari</span>
+  </footer>
+
+  <script>
+    document.getElementById('launch-form').addEventListener('submit', function (e) {
+      e.preventDefault();
+      const input = document.getElementById('vip-email');
+      const feedback = document.getElementById('form-feedback');
+      const email = input.value.trim();
+      const isValid = /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email);
+
+      feedback.classList.remove('hidden');
+
+      if (!isValid) {
+        feedback.textContent = 'Please enter a valid email address.';
+        input.focus();
+        return;
+      }
+
+      feedback.textContent = `You’re on the list. We’ll notify ${email} before launch.`;
+      input.value = '';
+    });
+  </script>
+</body>
+</html>
